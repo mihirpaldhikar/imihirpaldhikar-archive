@@ -1,0 +1,27 @@
+name: Deploy CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  protium-website-deploy:
+    name: Run the Files to compile into website and upload to Server on Success.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "16.x"
+      - uses: subosito/flutter-action@master
+        with:
+          channel: "stable"
+      - run: flutter build web --release
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.SERVER_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_IMIHIRPALDHIKAR_PORTFOLIO }}"
+          expires: 30d
+          projectId: "${{ secrets.SERVER_ID }}"
+          channelId: live
