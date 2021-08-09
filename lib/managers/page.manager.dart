@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:imihirpaldhikar_portfolio/Pages/about.page.dart';
 import 'package:imihirpaldhikar_portfolio/Pages/contact.page.dart';
-import 'package:imihirpaldhikar_portfolio/Pages/home.page.dart';
+import 'package:imihirpaldhikar_portfolio/Pages/home/home.page.dart';
 import 'package:imihirpaldhikar_portfolio/Pages/projects.page.dart';
+import 'package:imihirpaldhikar_portfolio/constants/colors.constant.dart';
 import 'package:imihirpaldhikar_portfolio/constants/strings.constant.dart';
 import 'package:universal_html/html.dart';
 
@@ -45,10 +46,27 @@ class _PageManagerState extends State<PageManager> {
             ),
       },
       theme: ThemeData(
+        primaryColor: ColorsConstants.primaryColor,
+        accentColor: ColorsConstants.accentColor,
+        scaffoldBackgroundColor: ColorsConstants.primaryColor,
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,
+        ).apply(
+          bodyColor: Colors.white,
         ),
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: ColorsConstants.primaryColor,
+        accentColor: ColorsConstants.accentColor,
+        scaffoldBackgroundColor: ColorsConstants.primaryColor,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ).apply(
+          bodyColor: Colors.white,
+        ),
+      ),
+      themeMode: ThemeMode.dark,
     );
   }
 }
