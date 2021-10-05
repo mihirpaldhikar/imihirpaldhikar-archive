@@ -1,3 +1,5 @@
+![Profile Banner](https://user-images.githubusercontent.com/68847718/136068625-753fa3fe-f10b-481b-a8db-e0ebd3411e6c.png)
+
 # 🙋‍♂️ Hey There!
 ### Nice to meet you!
 * I am Mihir Paldhikar currently doing my Computer Science from Vadodra, Gujarat, India.
