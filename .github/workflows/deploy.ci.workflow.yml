@@ -11,12 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: "Create Website Configurations File"
+        uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: ${{ github.workspace }}/frontend/apps/bookology/website.config.env
+          FILE_BASE64: ${{ secrets.WEBSITE_CONFIGURATIONS }}
       - uses: actions/setup-java@v1
         with:
           java-version: "16.x"
       - uses: subosito/flutter-action@master
         with:
-          channel: "stable"
+          channel: "master"
       - run: flutter build web --release
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

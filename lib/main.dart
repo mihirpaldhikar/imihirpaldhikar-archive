@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
-import 'package:imihirpaldhikar_portfolio/managers/page.manager.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:imihirpaldhikar/managers/website.manager.dart';
 import 'package:url_strategy/url_strategy.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: "website.config.env");
   setPathUrlStrategy();
-  runApp(PageManager());
+  runApp(const WebsiteManager());
+  GoogleFonts.config.allowRuntimeFetching = true;
 }
