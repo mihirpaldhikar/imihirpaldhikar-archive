@@ -54,11 +54,13 @@ App. Download the Bookology App from the Google Play Store <br>
 
 ## 📊 Here Are Some Stats Of Mine
 
-![Mihir's GitHub stats](https://github-readme-stats.vercel.app/api?username=imihirpaldhikar&theme=algolia&show_icons=true)
+![Mihir's GitHub stats](https://github-readme-stats.vercel.app/api?username=imihirpaldhikar&show_icons=true&theme=algolia)
+
 
 ## 💻 The Languages I Used The Most
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=imihirpaldhikar&theme=algolia)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=imihirpaldhikar&layout=compact&theme=algolia)](https://imihirpaldhikar.com)
+
 
 
 
