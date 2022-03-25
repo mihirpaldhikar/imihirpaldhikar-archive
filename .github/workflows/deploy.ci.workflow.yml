@@ -19,6 +19,14 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: "16.x"
+      - name: Create Authorization Certificates Folder
+        run: |
+          mkdir ${{ github.workspace }}/web/.well-known
+      - name: 'Write Authorization Certificates Files'
+        uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: ${{ github.workspace }}/web/.well-known/jwks.json
+          FILE_BASE64: ${{ secrets.SUPERR_FANS_AUTHORIZATION_CERTIFICATES }}
       - uses: subosito/flutter-action@master
         with:
           channel: "master"
